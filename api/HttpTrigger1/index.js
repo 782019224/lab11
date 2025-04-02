@@ -6,6 +6,7 @@ module.exports = async function (context, req) {
     try {
         const parsedUrl = new URL(req.url.replaceAll("/api", ""));
         const url = new URL(`https://lab11back.azurewebsites.net${parsedUrl.pathname}${parsedUrl.search}`);
+        
 
         const options = {
             method: req.method,
